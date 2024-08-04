@@ -1,0 +1,615 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+}
+.navbar{
+  background-color: white;
+}
+.navbar-nav .nav-link {
+    display: inline-block;
+    transition: .4s ;
+  }
+  .navbar-nav .nav-link:hover {
+    background-color: rgb(239, 84, 84);
+    transform: translateX(6px); /* Adjust this value to control how far the button moves */
+  }
+  .clock{
+    /* margin-left: 50px; */
+    /* max-height: 1200px; */
+    direction: rtl;
+    background-color: rgb(241, 241, 241);
+    width: 100%;
+  }
+  .clock img{
+    
+    margin-right: 300px;
+    direction: ltr;
+  }
+  .container1 h1 {
+    font-size: 50px;
+    margin-right: 40%;
+    color: black;
+    font-weight: 800;
+    text-transform: capitalize; /* يجعل أول حرف كبير والباقي صغير */
+  }
+
+    .container1 {
+      position: relative;
+      /* text-align: center; */
+    }
+    .container1 img {
+      max-width: 100%;
+      height: auto;
+    }
+    .container1 .text {
+      position: absolute;
+      top: 30%; /* تعديل حسب الحاجة */
+      left: 10%; /* تعديل حسب الحاجة */
+      /* transform: translate(-50%, 0%); لضبط المحاذاة في المنتصف */
+      font-size: 70px;
+      font-weight: bold;
+      color: #333;
+    }
+    .container1 .text span {
+      display: block;
+    }
+    .container1 .text p{
+      font-size: 20px;
+      direction: ltr;
+    }
+/* Button styles */
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  right: 74%;
+  top: auto;
+}
+
+.button:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: red;
+  z-index: -2;
+}
+
+.button:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgb(71, 71, 71);
+  transition: all 0.3s;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.button:hover {
+  color: #fff;
+}
+
+.button:hover:before {
+  width: 100%;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  color: #777;
+}
+
+/* span {
+  display: block;
+  margin-top: 2rem;
+  font-size: 0.7rem;
+  color: #777;
+}
+
+span a {
+  font-size: 0.7rem;
+  color: #999;
+  text-decoration: underline;
+} */
+.new-products h1{
+  margin-top: 50px;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin-left: 450px;
+}
+.container img{
+  margin-left: 15px;
+}.new-products {
+  overflow: hidden;
+}
+
+.product-images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.animate-image {
+  width: 30%; /* أو أي حجم مناسب */
+  overflow: hidden;
+  position: relative;
+}
+
+.animate-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.animate-image:hover img {
+  transform: scale(1.1);
+}
+
+.animate-image p{
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+.animate-image .price
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    gap: 10px;
+  }
+  .gallery {
+    padding: 20px 0;
+  }
+  
+  .images {
+    display: flex;
+    gap: 30px;
+    height: 100vh; /* أو أي ارتفاع محدد تريده */
+  }
+  
+  .image-container {
+    overflow: hidden;
+    overflow-x: hidden;
+  }
+  
+  /* الصورة الأولى تأخذ 60% */
+  .image-container:first-child {
+    flex: 0 0 55%;
+    height: 700px;
+  }
+  
+  /* الصورة الثانية تأخذ 20% */
+  .image-container:nth-child(2) {
+    flex: 0 0 20%;
+    height: 700px;
+  }
+  
+  /* آخر حاوية (تحتوي على صورتين) تأخذ 20% */
+  .image-container:last-child {
+    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: 700px;
+  }
+  
+  .image-container img,
+  .first img,
+  .second img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .first,
+  .second {
+    flex: 1;
+    overflow: hidden;
+    overflow-x: hidden;
+  }
+  
+  /* تأثير الـ hover لكل صورة */
+  .image-container img:hover,
+  .first img:hover,
+  .second img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+  }
+  
+  /* Animation للصور */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .image-container img,
+  .first img,
+  .second img {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  /* Animation للصور */
+
+  .image-container img,
+  .first img,
+  .second img {
+    animation: fadeInScale 0.8s ease-out forwards;
+  }
+  
+  /* للتأكد من أن التصميم متجاوب */
+  @media (max-width: 768px) {
+    .images {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .image-container,
+    .image-container:first-child,
+    .image-container:nth-child(2),
+    .image-container:last-child {
+      flex: none;
+      width: 100%;
+      height: 300px; /* يمكنك تعديل هذا حسب الحاجة */
+      margin-bottom: 20px;
+    }
+  
+    .first,
+    .second {
+      height: 150px; /* نصف ارتفاع الحاوية الأصلية */
+    }
+  }.popular-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .Items h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    margin-top: -10%;
+  }
+  .Items {
+    padding: 20px;
+  }
+  
+  .Items h2 {
+    margin-bottom: 10px; 
+
+  }
+  
+  .item-description {
+    margin-bottom: 10px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal; 
+  }
+  
+  .item-cta {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .Items p {
+    margin: 10px 0;
+  }
+  .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+  }
+
+.custom-hr {
+color: red;
+}
+.item-container i{
+  color: red;
+  font-size: 20px;
+}
+.fa-heart{
+  color: red;
+  font-size: 20px;
+}
+.item-container{
+  position: relative;
+}
+.item-container i{
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: black;
+}
+.item-container:hover i{
+  display: block;
+}
+.item-container {
+  /* إزالة أي animation */
+  animation: none;
+  /* إزالة أي transition إذا كانت موجودة */
+  transition: none;
+}
+.item-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.item-container img {
+  width: 100%;
+  display: block;
+}
+.rectangle {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: rgba(255, 0, 0, 0.8); /* لون أحمر شفاف قليلاً */
+  width: 100%;
+  transition: transform 0.3s ease;
+  transform-origin: bottom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-container:hover .rectangle {
+  transform: scaleY(19); /* زيادة القيمة لإعطاء مساحة أكبر للنص */
+  opacity: -3;
+}
+.item-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.item-container p {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s, height 0.3s ease;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  background-color: rgba(255, 0, 0, 0.7); /* لون أحمر شفاف */
+  color: white; /* لون النص */
+  margin: 0;
+  overflow: hidden;
+}
+
+.item-container:hover p {
+  visibility: visible;
+  opacity: 1;
+  height: 70px; /* ارتفاع المستطيل عند الظهور، يمكنك تعديله حسب الحاجة */
+}
+.item-container h1 {
+  font-size: 20px;
+  text-align: center;
+  margin: 0 0 5px 0; /* هامش أسفل h1 */
+  width: 100%;
+}
+
+.item-container h2 {
+  font-size: 16px;
+  text-align: center;
+  color: #888;
+  margin: 0;
+  width: 100%;
+  top: -30%;
+}
+.discription1 {
+  width: 10%; /* يجب أن يكون نفس عرض .item-container */
+  text-align: center;
+  margin-bottom: 0px;
+}
+.container2 img{
+  margin-top: 10%;
+  margin-left: 60%;
+}
+.container2 h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  font-weight: 800;
+  color: black;
+  margin-right: 40%;
+  margin-top: -20%;
+}
+.container2 p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin-right: 33%;
+  margin-top: 0%;
+}
+.container2 button{
+  color: white;
+  background-color: red;
+  height: 50px;
+  width: 170px;
+  font-size: 20px;
+  border-radius: 5%;
+  margin-left: 20%;
+  cursor: pointer;
+}
+.container3 img{
+  margin-left: 16%;
+  margin-bottom: 10%;
+}
+.container3 h1{
+  display: inline;
+  font-size: 40px;
+  font-weight: 800;
+  color: black;
+  margin-left: 5%;
+  margin-top: 10%;
+}
+.container3 p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 53%;
+  margin-top: -20%;
+}
+.container3 button{
+  color: white;
+  background-color: red;
+  height: 50px;
+  width: 170px;
+  font-size: 20px;
+  border-radius: 5%;
+  margin-left: 63%;
+  cursor: pointer;
+}
+.container3 h2{
+  display: none;
+}
+@media screen and (max-width: 1400px) {
+  .clock img {
+    display: none;
+  }
+  .clock {
+    direction: rtl;
+    background-color: rgb(241, 241, 241);
+    width: 100%;
+    height: 100vh;
+  }
+  .text{
+    margin-left: 10%; 
+    margin-right: 10%;
+    margin-top: 10%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  body{
+    overflow-x: hidden;
+  }
+  .text span {
+
+    }
+    .section1{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .section2{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .section2 h1{
+      font-size: 30px;
+      margin-right: 50%;
+      color: black;
+      font-weight: 800;
+      display: none;
+      text-transform: capitalize; /* يجعل أول حرف كبير والباقي صغير */
+    }
+    .section2 p{
+      margin-top: 0%;
+      margin-left: 7%;
+    }
+    .section2 h2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      color: black;
+      font-weight: 800;
+      margin-right: -60px;
+    }
+    .section2 img{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 10%;
+      width: 80%;
+    }
+    .section2 button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 30%;
+    }
+    .section1 button{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 30%;
+    
+    }
+    .section1 img{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10%;
+      margin-right: 10%;
+      margin-top: 10%;
+      width: 80%;
+    }
+    .section1 h1{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      color: black;
+      font-weight: 800;
+      margin-top: 10%;
+      margin-right: 0%;
+    }
+    .section1 p{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10%;
+      margin-right: 0%;
+      margin-top: 0%;
+    }
+
+}

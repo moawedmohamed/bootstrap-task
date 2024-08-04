@@ -1,0 +1,15 @@
+{
+  "folders": [
+	{
+		"name": "bootstrap task",
+		"path": "."
+	},
+	{
+		"name": "imags",
+		"path": "../imags"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "bootstrap task"
+  }
+}
